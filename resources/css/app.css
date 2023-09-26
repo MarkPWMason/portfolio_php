@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header */
+
+#header {
+    min-height: 50px;
+    background: lightcyan;
+}
+
+#headerContainer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#navbar {
+    margin: auto 0;
+}
+
+#navbar a {
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 20px;
+    text-decoration: none;
+}
+
+footer {
+    min-height: 50px;
+    background: PapayaWhip;
+}
+
+#content {
+    flex: 1;
+}

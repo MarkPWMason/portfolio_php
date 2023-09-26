@@ -1,0 +1,19 @@
+#adminLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.formInput {
+    height: 30px;
+    margin: 5px;
+}
+
+.formBtn {
+    align-self: center;
+    height: 30px;
+    width: 100px;
+    margin: 5px;
+}
