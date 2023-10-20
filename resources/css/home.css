@@ -1,0 +1,54 @@
+#postContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    background-color: aqua;
+    width: 50%;
+    margin: 10px auto;
+}
+
+#postTitle {
+    font-size: 50px;
+}
+
+#desc_skillsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#skillsContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+#skillsHeader {
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+#postSkills {
+    margin: 0;
+    width: 5%;
+    font-size: 22px;
+}
+
+#descriptionContainer {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#postDescription {
+    font-size: 20px;
+}
+
+#postImage {
+    width: 400px;
+    height: 300px;
+}

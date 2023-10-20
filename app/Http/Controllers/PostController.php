@@ -83,4 +83,10 @@ class PostController extends Controller
 
         return redirect('/create-post');
     }
+
+    public function showPost($id)
+    {
+        $post = post::where('posts.id', $id)->firstOrFail();
+        return view('post', ['post' => $post]);
+    }
 }

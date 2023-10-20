@@ -13,6 +13,9 @@
     @if (Request::path() == 'create-post')
         @vite(['resources/css/create-post.css'])
     @endif
+    @if (Request::path() == '/')
+        @vite(['resources/css/home.css'])
+    @endif
 </head>
 
 <body>

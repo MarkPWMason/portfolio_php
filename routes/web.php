@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'homePage']);
+Route::get('/', [PageController::class, 'homePage'])->name('homePage');
 
 Route::get('/admin', [PageController::class, 'adminPage'])->name('admin');
 Route::post('/adminLogin', [AdminController::class, 'adminLogin'])->name('adminLogin')->middleware('throttle:10,1');
@@ -29,5 +29,5 @@ Route::post('/publish-post', [PostController::class, 'publishPost'])->name('publ
 //Access images
 Route::get('image/{fileName}', [ImageController::class, 'getImage'])->name('image');
 
-
+Route::get('/post/{id}', [PostController::class, 'showPost'])->name('showPost');
 // ->middleware('mustBeLoggedIn') -- this will be added to the routes that need to be logged in.
