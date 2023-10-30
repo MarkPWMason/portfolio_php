@@ -1,0 +1,82 @@
+@font-face {
+    font-family: Agbalumo;
+    src: url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+}
+
+.container {
+    display: flex;
+    background-color: #fca371;
+    border: solid black 5px;
+    border-radius: 20px;
+    margin: 40px auto 0 auto;
+    width: 925px;
+    height: 500px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    width: 800px;
+    text-align: center;
+    font-family: Agbalumo;
+}
+
+.form h2 {
+    font-size: 30px;
+}
+
+.name {
+    height: 30px;
+    width: 40%;
+    border-radius: 20px;
+    text-align: center;
+    margin: 5px auto;
+    background-color: #d1f7ff;
+    font-size: 20px;
+}
+
+.subject {
+    height: 30px;
+    width: 40%;
+    border-radius: 20px;
+    text-align: center;
+    margin: 5px auto;
+    background-color: #d1f7ff;
+    font-size: 20px;
+}
+
+#email {
+    height: 30px;
+    width: 60%;
+    border-radius: 20px;
+    text-align: center;
+    margin: 5px auto;
+    background-color: #d1f7ff;
+    font-size: 20px;
+}
+
+#body {
+    height: 150px;
+    width: 600px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 5px auto;
+    background-color: #d1f7ff;
+    font-size: 20px;
+}
+
+#submitBtn {
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 0 auto;
+    background-color: #d1f7ff;
+}
+
+#submitBtn:hover {
+    cursor: pointer;
+    background-color: #1ab6d9;
+}

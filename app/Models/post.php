@@ -12,7 +12,6 @@ class post extends Model
     protected $fillable = [
         'title',
         'description',
-        'video',
         'link',
         'better',
         'madeWith',
@@ -26,5 +25,10 @@ class post extends Model
     public function images()
     {
         return $this->hasMany(images::class);
+    }
+
+    public function videos()
+    {
+        return $this->hasMany(video::class);
     }
 }

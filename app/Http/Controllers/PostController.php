@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\post;
 use App\Models\skills;
 use App\Models\images;
+use App\Models\video;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -79,6 +80,19 @@ class PostController extends Controller
             //make sure image names never collide
             $image->storeAs('portfolioScreenshots/', $filename, 's3');
             $imageModel->save();
+        }
+
+        $videos = $request->file('videos');
+        foreach ($videos as $video) {
+            $mimeType = $video->getMimeType();
+            $videoModel = new video();
+            $videoModel->post_id = $post_id;
+            $filename = $this->gen_uuid() . time() . $video->getClientOriginalName();
+            $videoModel->videoFilename = $filename;
+            $videoModel->mimeType = $mimeType;
+
+            $video->storeAs('portfolioVideos/', $filename, 's3');
+            $videoModel->save();
         }
 
         return redirect('/create-post');

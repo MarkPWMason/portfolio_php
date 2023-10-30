@@ -25,4 +25,9 @@ class PageController extends Controller
     {
         return view('create-post');
     }
+
+    public function contactMe()
+    {
+        return view('contact-me');
+    }
 }

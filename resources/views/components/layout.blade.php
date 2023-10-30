@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mark's Portfolio</title>
     @vite(['resources/css/app.css'])
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
     @if (Request::path() == 'admin')
         @vite(['resources/css/admin.css'])
     @endif
@@ -15,17 +18,29 @@
     @endif
     @if (Request::path() == '/')
         @vite(['resources/css/home.css'])
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        @vite(['resources/js/swiper.js'])
+        @vite(['resources/js/weatherHandler.js'])
     @endif
+    @if (Request::path() == 'contact')
+        @vite(['resources/css/contact.css'])
+    @endif
+
+    @if (strpos(Request::path(), 'post/') !== false)
+        @vite(['resources/css/post.css'])
+    @endif
+
 </head>
 
 <body>
     <header id="header">
         <div id="headerContainer">
-            <h1>Mark's Portfolio</h1>
-            <nav id="navbar">
-                <a href="">Projects</a>
-                <a href="">Contact Me</a>
-            </nav>
+            <h1><a class="headerTitle" href="{{ route('homePage') }}">Mark's Portfolio</a> </h1>
+            <h1>
+                <a href="{{ route('contactMe') }}" class="headerLink">Contact Me</a>
+            </h1>
         </div>
     </header>
 
@@ -33,9 +48,11 @@
 
     <footer id="footer">
         <div id="footerContainer">
-            <h1>Footer</h1>
+            <p class="text">Made using Javascript, PHP, Laravel, Blade and MySQL</p>
+            <p class="text">Mark Paul William Mason&copy;</p>
         </div>
     </footer>
 </body>
+
 
 </html>

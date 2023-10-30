@@ -9,11 +9,7 @@ class ImageController extends Controller
 {
     public function getImage($fileName)
     {
-        try {
-            $result = Storage::disk('s3')->response('portfolioScreenshots/' . $fileName);
-            return $result;
-        } catch (Exception $e) {
-            dd($e);
-        }
+        $result = Storage::disk('s3')->response('portfolioScreenshots/' . $fileName);
+        return $result;
     }
 }

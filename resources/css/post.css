@@ -1,0 +1,15 @@
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    width: 1500px;
+    height: 900px;
+    background-color: #fca371;
+
+    margin: 50px auto;
+
+    border: 5px solid black;
+    border-radius: 20px;
+}

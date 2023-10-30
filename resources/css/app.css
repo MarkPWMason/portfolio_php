@@ -1,27 +1,72 @@
+:root {
+    --outline: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px,
+        rgb(0, 0, 0) 2.35766px 1.85511px 0px,
+        rgb(0, 0, 0) 1.62091px 2.52441px 0px,
+        rgb(0, 0, 0) 0.705713px 2.91581px 0px,
+        rgb(0, 0, 0) -0.287171px 2.98622px 0px,
+        rgb(0, 0, 0) -1.24844px 2.72789px 0px,
+        rgb(0, 0, 0) -2.07227px 2.16926px 0px,
+        rgb(0, 0, 0) -2.66798px 1.37182px 0px,
+        rgb(0, 0, 0) -2.96998px 0.42336px 0px,
+        rgb(0, 0, 0) -2.94502px -0.571704px 0px,
+        rgb(0, 0, 0) -2.59586px -1.50383px 0px,
+        rgb(0, 0, 0) -1.96093px -2.27041px 0px,
+        rgb(0, 0, 0) -1.11013px -2.78704px 0px,
+        rgb(0, 0, 0) -0.137119px -2.99686px 0px,
+        rgb(0, 0, 0) 0.850987px -2.87677px 0px,
+        rgb(0, 0, 0) 1.74541px -2.43999px 0px,
+        rgb(0, 0, 0) 2.44769px -1.73459px 0px,
+        rgb(0, 0, 0) 2.88051px -0.838247px 0px;
+}
+
+@font-face {
+    font-family: Agbalumo;
+    src: url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+}
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     margin: 0;
+    border: solid black 5px;
+
+    /*If Australia -- transform: rotate(180deg); */
 }
 
-/* Header */
-
 #header {
-    min-height: 50px;
-    background: lightcyan;
+    min-height: 120px;
+    background: #1ab6d9;
+    border-bottom: solid black 5px;
+    z-index: 3;
+    font-family: Agbalumo;
+}
+
+.headerTitle {
+    color: #fca371;
+    text-shadow: var(--outline);
+    cursor: pointer;
+    text-decoration: none;
+}
+.headerTitle:hover {
+    text-decoration: underline;
+}
+
+.headerLink {
+    color: #fca371;
+    text-shadow: var(--outline);
+    cursor: pointer;
+    text-decoration: none;
+}
+.headerLink:hover {
+    text-decoration: underline;
 }
 
 #headerContainer {
     display: flex;
     flex-direction: row;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 10px;
-}
-
-#navbar {
-    margin: auto 0;
 }
 
 #navbar a {
@@ -31,11 +76,24 @@ body {
     text-decoration: none;
 }
 
-footer {
-    min-height: 50px;
-    background: PapayaWhip;
+#footer {
+    min-height: 98px;
+    background: #1ab6d9;
+    border-top: solid black 5px;
+}
+
+#footerContainer {
+    text-align: center;
+    padding: 10px;
 }
 
 #content {
+    min-height: 90vh;
     flex: 1;
+    background: url("/public/images/background.svg");
+}
+
+.text {
+    font-size: 15px;
+    color: black;
 }

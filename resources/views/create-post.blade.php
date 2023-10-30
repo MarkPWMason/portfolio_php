@@ -9,7 +9,7 @@
         <input name="title" type="text" placeholder="title">
         <textarea name="description" id="" cols="30" rows="10" placeholder="desc"></textarea>
         <label for="video">Video</label>
-        <input name="video" type="file">
+        <input name="videos[]" type="file" multiple>
         <input name="link" type="text" placeholder="link to project">
         <textarea name="better" id="" cols="30" rows="10" placeholder="how to make it better"></textarea>
         <textarea name="madeWith" id="" cols="30" rows="10" placeholder="what was it made with"></textarea>

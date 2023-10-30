@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +29,9 @@ Route::post('/publish-post', [PostController::class, 'publishPost'])->name('publ
 
 //Access images
 Route::get('image/{fileName}', [ImageController::class, 'getImage'])->name('image');
+Route::get('video/{fileName}', [VideoController::class, 'getVideo'])->name('video');
 
 Route::get('/post/{id}', [PostController::class, 'showPost'])->name('showPost');
 // ->middleware('mustBeLoggedIn') -- this will be added to the routes that need to be logged in.
+
+Route::get('/contact', [PageController::class, 'contactMe'])->name('contactMe');
