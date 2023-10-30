@@ -16,11 +16,15 @@
             </ul>
         </div>
 
+        {{-- Hardware acceleration breaks videos dont enable it in chrome --}}
         @foreach ($post->videos as $video)
-            <video id="video" width="320" height="240" controls>
-                <source src="{{ route('video', $video->videoFilename) }}" type="{{ $video->mimeType }}">
-            </video>
+            <div>
+                <video id="video" controls>
+                    <source src="{{ route('video', $video->videoFilename) }}" type="{{ $video->mimeType }}">
+                </video>
+            </div>
         @endforeach
+
         <div>
             @foreach ($post->images as $image)
                 <img id="postImage" src="{{ route('image', $image->imageUrl) }}" />

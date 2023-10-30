@@ -89,8 +89,12 @@ body {
 
 #content {
     min-height: 90vh;
-    flex: 1;
     background: url("/public/images/background.svg");
+}
+
+#preload {
+    /* In this case / context display hidden works. */
+    display: none;
 }
 
 .text {
