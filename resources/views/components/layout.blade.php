@@ -30,7 +30,16 @@
 
     @if (strpos(Request::path(), 'post/') !== false)
         @vite(['resources/css/post.css'])
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        @vite(['resources/js/swiper.js'])
     @endif
+
+    @if (Request::path() == 'cv')
+        @vite(['resources/css/cv.css'])
+    @endif
+
 
 </head>
 
@@ -38,6 +47,9 @@
     <header id="header">
         <div id="headerContainer">
             <h1><a class="headerTitle" href="{{ route('homePage') }}">Mark's Portfolio</a> </h1>
+            <h1>
+                <a href="{{ route('cv') }}" class="headerLink">CV</a>
+            </h1>
             <h1>
                 <a href="{{ route('contactMe') }}" class="headerLink">Contact Me</a>
             </h1>
@@ -49,7 +61,12 @@
     <footer id="footer">
         <div id="footerContainer">
             <p class="text">Made using Javascript, PHP, Laravel, Blade and MySQL</p>
-            <p class="text">Mark Paul William Mason&copy;</p>
+            <div id="profileContainer">
+                <p class="text">Mark Paul William Mason&copy;</p>
+                <a id="linkedInLink" href="https://www.linkedin.com/in/mark-mason-701ba01b0/" target="_blank"><img
+                        id="linkedInIMG" src="/images/linkedin.webp" alt=""></a>
+            </div>
+
         </div>
     </footer>
 </body>

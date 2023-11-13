@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('link');
-            $table->string('better');
-            $table->string('madeWith');
+            $table->text('better');
+            $table->text('madeWith');
             $table->timestamps();
         });
     }

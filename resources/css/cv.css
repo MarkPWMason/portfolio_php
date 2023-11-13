@@ -1,0 +1,125 @@
+@font-face {
+    font-family: Agbalumo;
+    src: url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+}
+
+:root {
+    --outline: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px,
+        rgb(0, 0, 0) 2.35766px 1.85511px 0px,
+        rgb(0, 0, 0) 1.62091px 2.52441px 0px,
+        rgb(0, 0, 0) 0.705713px 2.91581px 0px,
+        rgb(0, 0, 0) -0.287171px 2.98622px 0px,
+        rgb(0, 0, 0) -1.24844px 2.72789px 0px,
+        rgb(0, 0, 0) -2.07227px 2.16926px 0px,
+        rgb(0, 0, 0) -2.66798px 1.37182px 0px,
+        rgb(0, 0, 0) -2.96998px 0.42336px 0px,
+        rgb(0, 0, 0) -2.94502px -0.571704px 0px,
+        rgb(0, 0, 0) -2.59586px -1.50383px 0px,
+        rgb(0, 0, 0) -1.96093px -2.27041px 0px,
+        rgb(0, 0, 0) -1.11013px -2.78704px 0px,
+        rgb(0, 0, 0) -0.137119px -2.99686px 0px,
+        rgb(0, 0, 0) 0.850987px -2.87677px 0px,
+        rgb(0, 0, 0) 1.74541px -2.43999px 0px,
+        rgb(0, 0, 0) 2.44769px -1.73459px 0px,
+        rgb(0, 0, 0) 2.88051px -0.838247px 0px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#cvContainer {
+    background-color: aliceblue;
+    margin: 20px auto;
+    padding: 0 40px 0 40px;
+
+    width: 1000px;
+    height: 650px;
+
+    overflow-y: auto;
+
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+#imgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.certImg {
+    width: 450px;
+    height: 300px;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.notBold {
+    font-weight: 200;
+}
+
+#cvDownload {
+    font-family: Agbalumo;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #fca371;
+    text-shadow: var(--outline);
+}
+
+#cvDownload:hover {
+    color: #1ab6d9;
+}
+
+@media only screen and (max-width: 1100px) {
+    #cvContainer {
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #cvContainer {
+        width: 600px;
+    }
+    #imgContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .certImg {
+        margin: 0 auto;
+        width: 450px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #cvContainer {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #cvContainer {
+        width: 200px;
+    }
+
+    .certImg {
+        width: 200px;
+        height: 150px;
+        margin: 0;
+    }
+}

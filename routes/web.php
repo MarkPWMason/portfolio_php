@@ -35,3 +35,5 @@ Route::get('/post/{id}', [PostController::class, 'showPost'])->name('showPost');
 // ->middleware('mustBeLoggedIn') -- this will be added to the routes that need to be logged in.
 
 Route::get('/contact', [PageController::class, 'contactMe'])->name('contactMe');
+
+Route::get('/cv', [PageController::class, 'cv'])->name('cv');

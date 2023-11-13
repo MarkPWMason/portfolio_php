@@ -100,4 +100,26 @@ body {
 .text {
     font-size: 15px;
     color: black;
+    font-weight: bolder;
+}
+#profileContainer {
+    display: flex;
+    justify-content: center;
+}
+#linkedInIMG {
+    width: 20px;
+    height: 20px;
+}
+#linkedInLink {
+    align-self: center;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    .headerTitle {
+        font-size: 20px;
+    }
+    .headerLink {
+        font-size: 20px;
+    }
 }

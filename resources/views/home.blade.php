@@ -49,14 +49,16 @@
                                         </ul>
                                     </div>
                                 @endif
-
+                                <hr color="black">
                                 <div id="descriptionContainer">
-                                    <p id="postDescription">{{ $post->description }}</p>
+                                    <p id="postDescription">
+                                        {{ \Illuminate\Support\Str::limit($post->description, $limit = 300, $end = '...') }}
+                                    </p>
                                 </div>
                             </div>
 
 
-                            <a href="{{ $post->link }}" target="_blank"
+                            <a id="postLink" href="{{ $post->link }}" target="_blank"
                                 onclick='event.stopPropagation()'>{{ $post->link }}</a>
                         </div>
                     </div>

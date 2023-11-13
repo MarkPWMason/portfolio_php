@@ -1,40 +1,264 @@
 .homeContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
 
     text-align: center;
 
     width: 1500px;
-    height: 900px;
+    height: 650px;
     background-color: #fca371;
 
     margin: 50px auto;
 
     border: 5px solid black;
     border-radius: 20px;
+
+    overflow-y: auto;
 }
 
 #content {
     min-height: 90vh;
-    background: url("/public/images/Ocean-2.5s-2560px.svg");
+    /* background: url("/public/images/Ocean-2.5s-2560px.svg"); */
 }
 
 #title {
     font-size: 70px;
+    margin: 20px 0 20px 0;
+    text-decoration: underline;
+}
+
+#postLink {
+    font-size: 20px;
+    margin: 20px;
+    font-weight: bolder;
+}
+
+#desc_skillsContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+
+    background-color: aliceblue;
+
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+#skillsContainer {
+    display: inline-block;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    margin: 0 auto 10px 15px;
+
+    padding-right: 50px;
+    border-right: 2px solid;
+}
+
+#skillsHeader {
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 0;
+}
+
+#postSkills {
+    margin: 0;
+    width: 5%;
+    font-size: 25px;
+}
+
+#descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#postDescription {
+    font-size: 25px;
     margin: 0;
 }
 
-#description {
-    font-size: 30px;
-    margin: 0;
+#postImage {
+    width: 750px;
+    height: 450px;
+    border: 5px solid black;
 }
 
 #video {
     position: relative;
     align-self: center;
-    width: 500px;
-    height: 300px;
+    width: 900px;
+    height: 500px;
     margin: 20px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+#madeWithContainer {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    padding: 20px;
+    margin: 15px;
+    background-color: aliceblue;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.subTitle {
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+.swiper {
+    width: 100% !important;
+
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 3 !important;
+}
+
+.swiper-buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 30px auto 0 auto;
+}
+
+.swiper-button-prev {
+    position: relative !important;
+    align-self: center;
+    justify-self: center;
+    margin: 0 50px 0 auto;
+    padding: 0;
+}
+.swiper-button-next {
+    position: relative !important;
+    align-self: center;
+    justify-self: center;
+    margin: 0 auto 0 50px;
+    padding: 0;
+}
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 1550px) {
+    .homeContainer {
+        width: 900px;
+    }
+    #madeWith {
+        padding: 10px;
+    }
+    #better {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .homeContainer {
+        width: 700px;
+    }
+    #video {
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .homeContainer {
+        width: 600px;
+    }
+    #postImage {
+        width: 600px;
+        height: 350px;
+    }
+    #video {
+        width: 600px;
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .homeContainer {
+        width: 500px;
+    }
+    #postImage {
+        width: 450px;
+        height: 350px;
+    }
+    #video {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .homeContainer {
+        width: 400px;
+    }
+    #postImage {
+        width: 300px;
+        height: 200px;
+    }
+    #video {
+        width: 300px;
+        height: 200px;
+    }
+    #skillsContainer {
+        padding-right: 10px;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .homeContainer {
+        width: 300px;
+    }
+    #postImage {
+        width: 190px;
+        height: 100px;
+    }
+    #video {
+        width: 190px;
+        height: 100px;
+    }
+    #skillsContainer {
+        padding-right: 5px;
+        margin-left: 0;
+    }
+    #postDescription {
+        font-size: 20px;
+        margin: 0;
+        padding: 5px;
+    }
+    #postSkills {
+        margin: 0;
+        width: 5%;
+        font-size: 20px;
+        padding: 5px;
+    }
+    #skillsHeader {
+        font-size: 22px;
+        margin-left: 20px;
+        margin-top: 0;
+    }
+    .subTitle {
+        font-size: 22px;
+        text-decoration: underline;
+    }
+    #madeWithContainer {
+        font-size: 20px;
+    }
+    #postLink {
+        font-size: 15px;
+        margin: 20px;
+        font-weight: bolder;
+    }
+    #title {
+        font-size: 50px;
+    }
 }

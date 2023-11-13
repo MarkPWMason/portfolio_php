@@ -30,4 +30,9 @@ class PageController extends Controller
     {
         return view('contact-me');
     }
+
+    public function cv()
+    {
+        return view('cv');
+    }
 }
